@@ -75,12 +75,12 @@ class Generator:
                 self.llm = Client(
                     host=bpy.context.scene.meshgen_props.ollama_host,
                 )
-                self.llm.pull(model='hf.co/bartowski/LLaMA-Mesh-GGUF:f16')
+                self.llm.pull(model='hf.co/bartowski/LLaMA-Mesh-GGUF:Q8_0')
             else:
                 import llama_cpp
 
                 self.llm = llama_cpp.Llama(
-                    model_path=absolute_path(".models/LLaMA-Mesh-f16.gguf"),
+                    model_path=absolute_path(".models/LLaMA-Mesh-Q8_0.gguf"),
                     n_gpu_layers=-1,
                     seed=1337,
                     n_ctx=4096,

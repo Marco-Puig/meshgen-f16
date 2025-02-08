@@ -2,7 +2,7 @@
     "required_models": [
         {
             "repo_id": "bartowski/LLaMA-Mesh-GGUF",
-            "filename": "LLaMA-Mesh-f16.gguf"
+            "filename": "LLaMA-Mesh-Q8_0.gguf"
         }
     ]
 }
