@@ -197,4 +197,6 @@ class MESHGEN_OT_CancelGeneration(bpy.types.Operator):
     def execute(self, context):
         props = context.scene.meshgen_props
         props.cancelled = True
+        self.mesh_obj.rotation_euler[1] = 1.5708
+        self.mesh_obj.rotation_euler[0] = 1.5708
         return {"FINISHED"}
